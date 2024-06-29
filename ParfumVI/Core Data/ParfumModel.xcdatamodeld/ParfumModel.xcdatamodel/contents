@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="unit" optional="YES" attributeType="String"/>
+        <relationship name="medley" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medley" inverseName="ingredient" inverseEntity="Medley"/>
+    </entity>
+    <entity name="Medley" representedClassName="Medley" syncable="YES" codeGenerationType="class">
+        <attribute name="conclusion" optional="YES" attributeType="String"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="destination" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="maturity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="period" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="update" optional="YES" attributeType="String"/>
+        <relationship name="ingredient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="medley" inverseEntity="Ingredient"/>
+        <relationship name="scenting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenting" inverseName="medley" inverseEntity="Scenting"/>
+    </entity>
+    <entity name="Scenting" representedClassName="Scenting" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="medley" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medley" inverseName="scenting" inverseEntity="Medley"/>
+    </entity>
+</model>
