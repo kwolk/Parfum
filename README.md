@@ -170,7 +170,8 @@ struct CustomTextFieldWithButton: View {
     }
 }
 ```
-![Raphael Nweke  Search 022](https://github.com/kwolk/Parfum/assets/114968/e2a8d402-003f-48cc-b631-c9aa0ce11ca9)
+![Raphael Nweke  Search 022](https://github.com/kwolk/Parfum/assets/114968/395a6066-5a10-4df2-96e8-3a6d5065c369)
+
 
 - Setting the relationship between Medleys (experiments) and Scenting (category) to Nullify meant that a Scenting entry could only be deleted when all of its dependent Medley's had been purged. This required a simple logic check on the array associated with the CoreData entry, but it important one:
 
@@ -198,8 +199,7 @@ func sectionView<T: View>(header: String, @ViewBuilder content: () -> T) -> some
     .padding(.vertical, FundamentalDimensions.headerSpacing.rawValue)
 }
 ```
-![parfumAmendViewDark](https://github.com/kwolk/Parfum/assets/114968/40d944db-3ad7-4030-809d-c27f0eb4226a)
-
+![parfumAmendViewHighlightedDark](https://github.com/kwolk/Parfum/assets/114968/fd72df61-66af-4e79-b4c0-1c659ebd5759)
 
 -----
 
@@ -240,7 +240,7 @@ Under appreciated in SwiftUI these were difficult to work with and only have a l
 #### Numerical Animation (Tile) ####
 Animating the elapsed days between the creation and current date using an animation effect was a little off, perhaps it was too quick ? But, if it started from zero then the animation would take too long. I could have further complicated the logic to specify the speed, based on number of day e.g. one hundred days would trigger a two fold increase in speed, but it challenging enough to get the animation working the way I needed to in the first instance:
 
-IMG : parfumInteractiveTileDark [gif]
+![parfumInteractiveTileDark](https://github.com/kwolk/Parfum/assets/114968/1df22856-0185-41bf-a390-5e48d8cad9e9)
 
 - _Attempting to bounce the date data above the divider, in unison with the label below it, the counter malfunctions for some reason ?_
 
@@ -249,10 +249,12 @@ IMG : parfumInteractiveTileDark [gif]
 
 #### Picker ####
 A mission objective was to not forget about existing experiments and so defaulting to “TBD” for the Picker makes sense for the user as those Medleys (experiments) will be the ones to focus on:
-![parfumStatusDark](https://github.com/kwolk/Parfum/assets/114968/8262a065-d1ea-429b-a375-8ef59d5295d6)
+
+![parfumStatusDark](https://github.com/kwolk/Parfum/assets/114968/a919d0f5-ebeb-41e0-99b4-521a2fd7a149)
 
 - _nb. new medleys will always default to this category, so first loading that data prevents the user feeling lost_
 
+![image](https://github.com/kwolk/Parfum/assets/114968/6cb03f63-34a4-4b1e-bb52-ab821f7caf23)
 
 -----
 
@@ -394,7 +396,7 @@ _____
 #### TODO ####
 
 - [ ] Import/Export CSV files : Exporting a single Medley in CSV/PDF format would be handy for anybody. However, it a lot more work to import, with all of the checks.
-- [ ] Neumorphism : I would like to offer a Neumorphic UI with lighting that rotates as the direction of view does on the Maps app when physically rotating the iDevice.
+- [ ] Neumorphism : I would like to offer a Neumorphic UI with lighting that rotates as the direction of view does on the Maps app when physically rotating the iDevice : <a href="https://codepen.io/maheshambure21/pen/aNOGOR" target="_blank">Mahesh Ambure has a good example with his ShineJS Test.</a>
 - [ ] Purge with text : As when deleting a Repo on GitHub I may introduce a feature to purge all Medleys (experiments) by typing a random word, as it woul be a lot quicker (CoreData relationship is set to Nullify)
 - [ ] Calendar : To better keep track of Medley's a Calendar date entry could be calculated from the maturity info e.g. 14 days
 
@@ -436,9 +438,7 @@ struct EditExperimentView: View {
 
 
 - [ ] Light/Dark icons : I would like to take advantage of some of a rumoured iOS 18 feature to switch the App icon based on the system mode setting (I already have the icons)
-
-IMG : Icons (Light/Dark)
-
+![parfumBottleIconMontage_w3](https://github.com/kwolk/Parfum/assets/114968/4a714fb0-38a9-436e-8284-c76f5457185b)
 ```swift
 /// EASTER EGG : CHANGE APP ICON ON DEMAND
 func changeAppIcon(to iconName: AlternativeIcons) {
