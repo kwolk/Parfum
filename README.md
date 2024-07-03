@@ -253,9 +253,6 @@ A mission objective was to not forget about existing experiments and so defaulti
 ![parfumStatusDark](https://github.com/kwolk/Parfum/assets/114968/a919d0f5-ebeb-41e0-99b4-521a2fd7a149)
 
 - _nb. new medleys will always default to this category, so first loading that data prevents the user feeling lost_
-
-![image](https://github.com/kwolk/Parfum/assets/114968/6cb03f63-34a4-4b1e-bb52-ab821f7caf23)
-
 -----
 
 
